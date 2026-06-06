@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio Profesional | Lucy Arenas Valbuena </title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8FAFC;
+    color:#334155;
+    line-height:1.7;
+    text-align:justify;
+}
+
+header{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:120px 20px 90px;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,.04);
+    border-radius:50%;
+    top:-250px;
+    right:-150px;
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(201,162,39,.08);
+    border-radius:50%;
+    bottom:-180px;
+    left:-120px;
+}
+
+
+header h1{
+    font-family:'Cinzel', serif;
+    font-size:3.6rem;
+    font-weight:600;
+    letter-spacing:3px;
+    margin-bottom:12px;
+    position:relative;
+    z-index:2;
+    text-transform:uppercase;
+}
+
+
+
+header p{
+    font-size:1.2rem;
+    opacity:.95;
+    position:relative;
+    z-index:2;
+}
+
+nav{
+    background:white;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(15,23,42,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.contenedor-pdf{
+    max-width:1100px;
+    margin:30px auto 80px auto;
+    padding:0 20px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0F172A;
+    margin:0 15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#C9A227;
+}
+
+section{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.perfil{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    margin-top:-40px;
+}
+
+.perfil-info{
+    max-width:500px;
+    text-align:left;
+}
+
+.perfil-info h2{
+    margin-bottom:15px;
+}
+
+.perfil-info p{
+    font-size:1.05rem;
+    margin-bottom:20px;
+}
+
+header,
+nav,
+.perfil{
+    text-align:center;
+}
+
+.perfil-info{
+    text-align:justify;
+}
+
+.perfil img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:50%;
+    border:8px solid white;
+    background:white;
+    margin-top:-70px;
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.15),
+        0 0 0 6px #C9A227;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    margin-bottom:30px;
+    border:1px solid #E5E7EB;
+    box-shadow:0 10px 25px rgba(15,23,42,.04);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(15,23,42,.10);
+}
+
+h2{
+    color:#0F172A;
+    font-size:1.8rem;
+    border:none;
+    padding:0;
+    margin-bottom:25px;
+    position:relative;
+}
+
+h2::after{
+    content:"";
+    width:70px;
+    height:4px;
+    background:#C9A227;
+    display:block;
+    margin-top:8px;
+    border-radius:10px;
+}
+
+h3{
+    color:#C9A227;
+    margin-top:20px;
+    margin-bottom:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.formacion-item{
+    margin-bottom:25px;
+}
+
+.formacion-item em{
+    color:#64748B;
+    font-style:normal;
+    font-weight:600;
+}
+
+ul{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.destacado{
+    color:#C9A227;
+    font-weight:700;
+}
+
+.btn{
+    display:inline-block;
+    background:linear-gradient(
+        135deg,
+        #C9A227,
+        #E6C75A
+    );
+    color:#0F172A;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:12px;
+    margin-top:15px;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(201,162,39,.25);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(201,162,39,.35);
+}
+
+.btn-pdf{
+    background:#0F172A;
+    color:white;
+    border:2px solid #C9A227;
+    padding:14px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-pdf:hover{
+    background:#C9A227;
+    color:#0F172A;
+}
+
+footer{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:90px 20px 70px;
+    }
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .perfil img{
+        width:180px;
+        height:180px;
+        margin-top:-50px;
+    }
+
+    .card{
+        padding:25px;
+    }
+}
+
+@media print{
+
+    nav,
+    .btn-pdf,
+    footer{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .card{
+        box-shadow:none;
+        border:1px solid #ddd;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Lucy Arenas Valbuena</h1>
+    <p>
+        Profesional en Realización Audiovisual | Estudiante de Administración Tecnológica
+    </p>
+</header>
+
+<nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#formacion">Formación</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#idiomas">Idiomas</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+
+<div class="contenedor-pdf">
+    <button class="btn-pdf" onclick="imprimirPDF()">
+        📄 Descargar Portafolio en PDF
+    </button>
+</div>
+
+
+
+<section class="perfil">
+
+	<img src="lucy.png" alt="Lucy Arenas Valbuena">
+
+    <div class="perfil-info">
+
+        <h2>Lucy Arenas Valbuena</h2>
+
+        <p>
+            Profesional Administrativa con experiencia en atención al cliente,
+            gestión documental, apoyo contable y coordinación administrativa.
+        </p>
+
+        <a href="#contacto" class="btn">
+            Contactarme
+        </a>
+
+    </div>
+
+</section>
+
+<section id="sobre-mi">
+    <div class="card">
+
+        <h2>Sobre mí</h2>
+
+<p>
+    Soy <span class="destacado">Lucy Arenas Valbuena</span>,
+    estudiante de Administración Tecnológica, Profesional en
+    Realización Audiovisual y Técnica en Gestión del Talento Humano.
+</p>
+
+<br>
+
+<p>
+    Profesional organizada, proactiva y comprometida, con más de
+    <span class="destacado">dos años de experiencia en áreas administrativas y atención al cliente</span>,
+    desempeñando funciones relacionadas con gestión documental,
+    apoyo a procesos contables, manejo de bases de datos,
+    facturación, control de inventarios y coordinación de equipos de trabajo.
+</p>
+
+<br>
+
+<p>
+    Complemento mi perfil con formación y experiencia en la
+    <span class="destacado">realización de proyectos audiovisuales y espectáculos</span>,
+    participando en procesos de preproducción, producción y
+    postproducción de piezas audiovisuales y televisiva.
+</p>
+
+<br>
+
+<p>
+    Me caracterizo por mis habilidades comunicativas, capacidad
+    de trabajo en equipo, resolución de conflictos, adaptabilidad
+    al cambio, iniciativa para el aprendizaje continuo, compromiso,
+    y orientación al logro de objetivos.
+</p>
+
+    </div>
+</section>
+
+<section id="formacion">
+    <div class="card">
+
+<h2>Formación Académica</h2>
+
+<div class="formacion-item">
+    <strong>Administración Tecnológica</strong><br>
+    Instituto Tecnológico Metropolitano (ITM) - Medellín, Colombia<br>
+    <em>Actualmente en formación</em>
+</div>
+
+<div class="formacion-item">
+    <strong>Profesional en Realización Audiovisual</strong><br>
+    Pere Martell - Tarragona, España<br>
+    <em>Graduada en 2022</em>
+</div>
+
+<div class="formacion-item">
+    <strong>Técnica en Gestión del Talento Humano</strong><br>
+    Fenicia Antioquia - Medellín, Colombia<br>
+    <em>Graduada en 2017</em>
+</div>
+
+</section>
+
+<section id="habilidades">
+    <div class="card">
+
+      <h2>Habilidades</h2>
+
+<h3>Competencias Administrativas</h3>
+
+<ul>
+    <li>Microsoft Office (Word, Excel, Outlook).</li>
+    <li>Gestión documental y administración de archivos.</li>
+    <li>Sistemas de información.</li>
+    <li>Tableros de control.</li>
+    <li>Facturación y apoyo a procesos contables.</li>
+    <li>Elaboración de informes administrativos.</li>
+    <li>Registro de ingresos y egresos.</li>
+    <li>Gestión de proveedores y suministros.</li>
+</ul>
+
+<br>
+
+<h3>Competencias Audiovisuales</h3>
+
+<ul>
+    <li>Adobe Lightroom.</li>
+    <li>Adobe Photoshop.</li>
+    <li>Adobe Premiere Pro.</li>
+    <li>CapCut.</li>
+    <li>Fotografía y captura audiovisual.</li>
+    <li>Preproducción audiovisual.</li>
+    <li>Producción audiovisual.</li>
+    <li>Postproducción y edición de video.</li>
+    <li>Realización televisiva.</li>
+    <li>Conocimientos básicos de Python.</li>
+</ul>
+
+<section id="experiencia">
+    <div class="card">
+
+        <h2>Experiencia Laboral</h2>
+
+        <h3>Administrativa | Salma S.A.S</h3>
+
+        <p><strong>01/2024 - 02/2025</strong></p>
+
+        <ul>
+            <li>Atención al cliente.</li>
+            <li>Acompañamiento de pacientes al inicio y final de cada sesión de terapia.</li>
+            <li>Gestión de agenda.</li>
+            <li>Gestión de suministros y proveedores.</li>
+            <li>Manejo de documentos y bases de datos.</li>
+        </ul>
+
+        <br>
+
+       <h3>Administrativa | Bronze Skin</h3>
+
+<p><strong>02/2025 - Actualidad</strong></p>
+
+<ul>
+    <li>Manejo de documentos y archivo.</li>
+    <li>Manejo de bases de datos.</li>
+    <li>Atención al cliente.</li>
+    <li>Gestión de agenda.</li>
+    <li>Facturación.</li>
+    <li>Manejo de caja.</li>
+    <li>Registro de ingresos y egresos.</li>
+    <li>Gestión y dirección de equipos de trabajo.</li>
+</ul>
+
+    </div>
+</section>
+
+<section id="idiomas">
+    <div class="card">
+
+        <h2>Idiomas</h2>
+
+        <ul>
+            <li>Castellano (Nativo).</li>
+            <li>Catalán.</li>
+        </ul>
+
+    </div>
+</section>
+
+<section id="contacto">
+    <div class="card">
+
+        <h2>Contacto</h2>
+
+        <p><strong>Correo:</strong> lvalbuena1912@gmail.com</p>
+        <p><strong>Ciudad:</strong> Medellín, Colombia</p>
+
+        <a href="mailto:lvalbuena1912@gmail.com" class="btn">
+            Contactarme
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Lucy Arenas | Portafolio Profesional</p>
+</footer>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+</body>
+</html>
